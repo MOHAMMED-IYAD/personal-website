@@ -403,7 +403,103 @@ section{
     color:#b9b9b9;
     line-height:1.9;
 }
+.testimonials{
+  padding:120px 20px;
+  background:#050505;
+  color:white;
+  text-align:center;
+}
 
+/* Title نفس ستايل موقعك */
+.testimonials .section-title h2{
+  font-size:3rem;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.testimonials .section-title span{
+  color:#00f5ff;
+}
+
+
+/* slider */
+.slider{
+  max-width:750px;
+  margin:auto;
+  position:relative;
+  overflow:hidden;
+}
+
+/* slides system */
+.slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transform:translateY(25px) scale(0.98);
+  transition:0.6s ease;
+  pointer-events:none;
+}
+
+.slide.active{
+  position:relative;
+  opacity:1;
+  transform:translateY(0) scale(1);
+  pointer-events:auto;
+}
+
+/* card (نفس ستايل موقعك بالضبط) */
+.card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:28px;
+  padding:35px;
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:rgba(0,245,255,0.4);
+  box-shadow:0 0 30px rgba(0,245,255,0.12);
+}
+
+/* text */
+.card p{
+  color:#b9b9b9;
+  line-height:1.9;
+  font-size:1.05rem;
+}
+
+/* stars (cyan عشان يندمج مع الثيم) */
+.stars{
+  color:#00f5ff;
+  margin:18px 0;
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+/* name */
+.card h4{
+  color:#b9b9b9;
+  margin-top:10px;
+  font-weight:700;
+}
+
+.card span{
+  font-size:13px;
+  opacity:0.6;
+}
+
+/* responsive */
+@media(max-width:600px){
+  .testimonials .section-title h2{
+    font-size:2.2rem;
+  }
+
+  .card{
+    padding:25px;
+  }
+}
 .contact-box{
     padding:60px;
 }
